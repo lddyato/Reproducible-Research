@@ -34,7 +34,7 @@ Replication <---> Reproduciblity <---> NOthing
 ![](pipeline.png)
 
 <img src="C:/User/Ning/pipeline.png">
-<img src="pipeline.png">
+<img src="http://img.blog.csdn.net/20150909102040839">
 
 ## What do we need?
 
