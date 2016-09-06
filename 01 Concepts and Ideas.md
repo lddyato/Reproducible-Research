@@ -9,7 +9,7 @@
 
 ## What's wrong with Replication?
 * Some	studies	cannot	be	replicated	
- – No	5me,	opportunis5c	
+ – No	time,	opportunis5c	
  – No	money	
  – Unique	
 * Reproducible	Research:	Make	analytic	data	and	code	available	so	that	others	may	reproduce	findings	
@@ -23,5 +23,72 @@ Replication <---> Reproduciblity <---> NOthing
 * Computing	power	is	greatly	increased,	allowing	more	sophisticated	analyses	  
 * For	every	field	“X”	there	is	a	field	“Computa5onal	X”   
 
-<img src="C:/Users/Ning/Desktop/pipeline.png">
+<img src="pipeline.png">
+![](pipeline.png)
+
+## What do we need?
+
+* Analytic	data	are	available	
+* Analytic	code	are	available	
+* Documenta5on	of	code	and	data	
+* Standard	means	of	distribu5on	
+
+## Who are the players?
+• Authors	
+ – Want	to	make	their	research	reproducible	
+ – Want	tools	for	RR	to	make	their	lives	easier	(or	at	least	not	much	harder)	
+• Readers	
+ – Want	to	reproduce	(and	perhaps	expand	upon)	interes5ng	findings	
+ – Want	tools	for	RR	to	make	their	lives	easier	
+ 
+ ## Chanllenges
+* Authors	must	undertake	considerable	effort	to	put	data/results	on	the	web	(may	not	have	resources	like	a	web	server)	
+* Readers	must	download	data/results	individually	and	piece	together	which	data	go	with	which	code	sec5ons,	etc.	
+* Readers	may	not	have	the	same	resources	as	authors	
+* Few	tools	to	help	authors/readers	(although	toolbox	is	growing!)	
+
+## In Reality...
+• Authors	
+ – Just	put	stuff	on	the	web	
+ – (Infamous)	Journal	supplementary	materials	
+ – There	are	some	central	databases	for	various	fields	(e.g.	biology,	ICPSR)	
+• Readers	
+ – Just	download	the	data	and	(try	to)	figure	it	out	
+ – Piece	together	the	socware	and	run	it	
+ 
+## Literate	(Statistical)	Programming	
+• An	article	is	a	stream	of	text	and	code	
+• Analysis	code	is	divided	into	text	and	code	“chunks”	
+• Each	code	chunk	loads	data	and	computes	results	
+• Presentation	code	formats	results	(tables,	figures,	etc.)	
+• Article	text	explains	what	is	going	on	
+• Literate	programs	can	be	weaved	to	produce	human-readable	documents	and	tangled	to	produce	machine-readable	documents	
+
+• Literate	programming	is	a	general	concept	that	requires	
+ 1. A	documenta5on	language	(human	readable)	
+ 2. A	programming	language	(machine	readable)	
+• Sweave	uses	LATEX	and	R	as	the	documenta5on	and	programming	languages	
+• Sweave	was	developed	by	Friedrich	Leisch(member	of	the	R	Core)	and	is	maintained	by	R	core	
+• Main	web	site:	<http://www.statistik.lmu.de/~leisch/Sweave>
+
+• knitr	is	an	alterna5ve	(more	recent)	package	
+• Brings	together	many	features	added	on	to	Sweave	to	address	limita5ons	
+• knitr	uses	R	as	the	programming	language	(although	others	are	allowed)	and	variety	of	documentation	languages	
+ – LaTeX,	Markdown,	HTML	
+• knitr	was	developed	by	Yihui Xie	(while	a	graduate	student	in	statistics	at	Iowa	State)	
+• See	<http://yihui.name/knitr/>
+
+## Sweave Limitations
+• Sweave	has	many	limitations	
+• Focused	primarily	on	LaTeX,	a	difficult	to	learn	markup	language	used	only	by	weirdos
+• Lacks	features	like	caching,	multiple	plots	per	chunk,	mixing	programming	languages	and	many	other	technical	items	
+• Not	frequently	updated	or	very	actively	developed	
+
+## Summary
+• Reproducible	research	is	important	as	a	minimum	standard,	particularly	for	studies	that	are	difficult	to	replicate	
+• Infrastructure	is	needed	for	creating	and	distributing	reproducible	documents,	beyond	what	is	currently	available	
+• There	is	a	growing	number	of	tools	for	creating	reproducible	documents	
+
+
+
 
