@@ -24,9 +24,18 @@ Replication <---> Reproduciblity <---> NOthing
 * For	every	field	“X”	there	is	a	field	“Computa5onal	X”   
 
 <img src="./pipeline.png">
+
+
 ![](‪C:\Users\Ning\pipeline.png)
+
+
+
 ![](C:/User/Ning/pipeline.png)
+![](pipeline.png)
+
 <img src="C:/User/Ning/pipeline.png">
+<img src="pipeline.png">
+
 ## What do we need?
 
 * Analytic	data	are	available	
