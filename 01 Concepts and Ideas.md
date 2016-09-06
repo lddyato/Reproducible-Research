@@ -1,10 +1,10 @@
 ## Replication
 * The	ultimate	standard	for	strengthening	scientific	evidence	is	replication	of	findings	and	conducting	studies	with independent	
- – Investigators
- – Data	
- – Analytical	methods	
- – Laboratories	
- – Instruments	
+ – Investigators  
+ – Data	  
+ – Analytical	methods	  
+ – Laboratories	  
+ – Instruments	  
 * Replication	is	particularly	important	in	studies	that	can	impact	broad	policy	or	regulatory	decisions	
 
 ## What's wrong with Replication?
@@ -23,4 +23,5 @@ Replication <---> Reproduciblity <---> NOthing
 * Computing	power	is	greatly	increased,	allowing	more	sophisticated	analyses	  
 * For	every	field	“X”	there	is	a	field	“Computa5onal	X”   
 
-![pipeline](file:///C:/Users/Ning/Desktop/pipeline.png)
+<img src="C:/Users/Ning/Desktop/pipeline.png">
+
