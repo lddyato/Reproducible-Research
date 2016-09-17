@@ -1,10 +1,10 @@
 ## Replication
 * The	ultimate	standard	for	strengthening	scientific	evidence	is	replication	of	findings	and	conducting	studies	with independent	
- – Investigators  
- – Data	  
- – Analytical	methods	  
- – Laboratories	  
- – Instruments	  
+ + Investigators  
+ + Data	  
+ + Analytical	methods	  
+ + Laboratories	  
+ + Instruments	  
 * Replication	is	particularly	important	in	studies	that	can	impact	broad	policy	or	regulatory	decisions	
 
 ## What's wrong with Replication?
@@ -15,26 +15,22 @@
 * Reproducible	Research:	Make	analytic	data	and	code	available	so	that	others	may	reproduce	findings	
 
 ## How can we brige the gap?
-Replication <---> Reproduciblity <---> NOthing
+Replication <---> Reproduciblity <---> Nothing
 
 ## Why do we need reproducible research?
 * New	technologies	increasing	data	collection	throughput;	data	are	more	complex	and	extremely	high	dimensional	  
 * Existing	databases	can	be	merged	into	new	“megadatabases”	  
 * Computing	power	is	greatly	increased,	allowing	more	sophisticated	analyses	  
-* For	every	field	“X”	there	is	a	field	“Computa5onal	X”   
+* For	every	field	“X”	there	is	a	field	“Computational	X”   
 
-<img src="./pipeline.png">
+## Example
+* Estimating small (but important) health effects in the presence of much stronger signals
+* Results inform substantial policy decisions, affect many stakeholders
+ + EPA regulations can cost billions of dollars
+* Complex statistical methods are needed and subjected to intense scrutiny
 
+<img src="https://github.com/lddyato/Reproducible-Research/blob/master/pipeline.jpg">
 
-![](‪C:\Users\Ning\pipeline.png)
-
-
-
-![](C:/User/Ning/pipeline.png)
-![](pipeline.png)
-
-<img src="C:/User/Ning/pipeline.png">
-<img src="http://img.blog.csdn.net/20150909102040839">
 
 ## What do we need?
 
@@ -67,36 +63,40 @@ Replication <---> Reproduciblity <---> NOthing
  – Piece	together	the	socware	and	run	it	
  
 ## Literate	(Statistical)	Programming	
-• An	article	is	a	stream	of	text	and	code	
+• An	article	is	a	stream	of	**text**	and	**code**	
 • Analysis	code	is	divided	into	text	and	code	“chunks”	
 • Each	code	chunk	loads	data	and	computes	results	
 • Presentation	code	formats	results	(tables,	figures,	etc.)	
 • Article	text	explains	what	is	going	on	
-• Literate	programs	can	be	weaved	to	produce	human-readable	documents	and	tangled	to	produce	machine-readable	documents	
+• Literate	programs	can	be	**weaved**	to	produce	human-readable	documents	and	tangled	to	produce	machine-readable	documents	
 
-• Literate	programming	is	a	general	concept	that	requires	
- 1. A	documenta5on	language	(human	readable)	
+Literate	programming	is	a	general	concept	that	requires	
+ 1. A	documentation	language	(human	readable)	
  2. A	programming	language	(machine	readable)	
+
+### Sweave
 • Sweave	uses	LATEX	and	R	as	the	documenta5on	and	programming	languages	
 • Sweave	was	developed	by	Friedrich	Leisch(member	of	the	R	Core)	and	is	maintained	by	R	core	
 • Main	web	site:	<http://www.statistik.lmu.de/~leisch/Sweave>
 
-• knitr	is	an	alterna5ve	(more	recent)	package	
-• Brings	together	many	features	added	on	to	Sweave	to	address	limita5ons	
-• knitr	uses	R	as	the	programming	language	(although	others	are	allowed)	and	variety	of	documentation	languages	
- – LaTeX,	Markdown,	HTML	
-• knitr	was	developed	by	Yihui Xie	(while	a	graduate	student	in	statistics	at	Iowa	State)	
-• See	<http://yihui.name/knitr/>
-
-## Sweave Limitations
+### Sweave Limitations
 • Sweave	has	many	limitations	
 • Focused	primarily	on	LaTeX,	a	difficult	to	learn	markup	language	used	only	by	weirdos
 • Lacks	features	like	caching,	multiple	plots	per	chunk,	mixing	programming	languages	and	many	other	technical	items	
 • Not	frequently	updated	or	very	actively	developed	
 
+### knitr
+• knitr	is	an	alternative	(more	recent)	package	
+• Brings	together	many	features	added	on	to	Sweave	to	address	limitations	
+• knitr	uses	R	as	the	programming	language	(although	others	are	allowed)	and	variety	of	documentation	languages	
+ + LaTeX,	Markdown,	HTML	
+• knitr	was	developed	by	Yihui Xie	(while	a	graduate	student	in	statistics	at	Iowa	State)	
+• See	<http://yihui.name/knitr/>
+
+
 ## Summary
-• Reproducible	research	is	important	as	a	minimum	standard,	particularly	for	studies	that	are	difficult	to	replicate	
-• Infrastructure	is	needed	for	creating	and	distributing	reproducible	documents,	beyond	what	is	currently	available	
+• Reproducible	research	is	important	as	a	**minimum	standard**,	particularly	for	studies	that	are	difficult	to	replicate	
+• Infrastructure	is	needed	for	**creating**	and	**distributing**	reproducible	documents,	beyond	what	is	currently	available	
 • There	is	a	growing	number	of	tools	for	creating	reproducible	documents	
 
 
