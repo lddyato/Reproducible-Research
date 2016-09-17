@@ -36,20 +36,21 @@ Replication <---> Reproduciblity <---> Nothing
 
 * Analytic	data	are	available	
 * Analytic	code	are	available	
-* Documenta5on	of	code	and	data	
+* Documentation	of	code	and	data	
 * Standard	means	of	distribu5on	
 
 ## Who are the players?
 • Authors	
  – Want	to	make	their	research	reproducible	
- – Want	tools	for	RR	to	make	their	lives	easier	(or	at	least	not	much	harder)	
+ – Want	tools	for	RR	to	make	their	lives	easier	(or	at	least	not	much	harder)	 
+ 
 • Readers	
  – Want	to	reproduce	(and	perhaps	expand	upon)	interes5ng	findings	
  – Want	tools	for	RR	to	make	their	lives	easier	
  
- ## Chanllenges
+## Chanllenges
 * Authors	must	undertake	considerable	effort	to	put	data/results	on	the	web	(may	not	have	resources	like	a	web	server)	
-* Readers	must	download	data/results	individually	and	piece	together	which	data	go	with	which	code	sec5ons,	etc.	
+* Readers	must	download	data/results	individually	and	piece	together	which	data	go	with	which	code	sections,	etc.	
 * Readers	may	not	have	the	same	resources	as	authors	
 * Few	tools	to	help	authors/readers	(although	toolbox	is	growing!)	
 
@@ -57,7 +58,8 @@ Replication <---> Reproduciblity <---> Nothing
 • Authors	
  – Just	put	stuff	on	the	web	
  – (Infamous)	Journal	supplementary	materials	
- – There	are	some	central	databases	for	various	fields	(e.g.	biology,	ICPSR)	
+ – There	are	some	central	databases	for	various	fields	(e.g.	biology,	ICPSR)	  
+ 
 • Readers	
  – Just	download	the	data	and	(try	to)	figure	it	out	
  – Piece	together	the	socware	and	run	it	
