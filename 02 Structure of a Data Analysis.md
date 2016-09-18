@@ -250,3 +250,5 @@ table(predictedSpam, testSpam$type)
  + 78% isn't that great
  + I could use more variables
  + Why logistic regression?
+
+## Step 11: Create reproducible code
