@@ -15,7 +15,8 @@
 * Statistical methods development
 * Danger Zone!!!
 * Proper data analysis
-### Example
+ 
+### Our Example
 * Start with a general question   
 Can I automatically detect emails that are SPAM that are not?
 * Make it concrete   
