@@ -149,4 +149,104 @@ table(trainSpam$type)
 * Check for missing data
 * Create exploratory plots
 * Perform exploratory analyses (e.g. clustering)
+```r
+plot(trainSpam$capitalAve ~ trainSpam$type)
+plot(log10(trainSpam$capitalAve + 1) ~ trainSpam$type)
+plot(log10(trainSpam[, 1:4] + 1))
+# Clustering
+hCluster = hclust(dist(t(trainSpam[, 1:57])))
+plot(hCluster)
+# New Clustering
+hClusterUpdated = hclust(dist(t(log10(trainSpam[, 1:55] + 1))))
+plot(hClusterUpdated)
+```
+## step 7: Statistical prediction/modeling
+* Should be informed by the results of your exploratory analysis
+* Exact methods depend on the question of interest
+* Transformations/processing should be accounted for when necessary
+* Measures of uncertainty should be reported
 
+```r
+trainSpam$numType = as.numeric(trainSpam$type) - 1
+costFunction = function(x, y) sum(x != (y > 0.5))
+cvError = rep(NA, 55)
+library(boot)
+for (i in 1:55) {
+lmFormula = reformulate(names(trainSpam)[i], response = "numType")
+glmFit = glm(lmFormula, family = "binomial", data = trainSpam)
+cvError[i] = cv.glm(trainSpam, glmFit, costFunction, 2)$delta[2]
+}
+## Which predictor has minimum cross-validated error?
+names(trainSpam)[which.min(cvError)]
+## [1] "charDollar"
+
+## Get a measure of uncertainty
+## Use the best model from the group
+predictionModel = glm(numType ~ charDollar, family = "binomial", data = trainSpam)
+## Get predictions on the test set
+predictionTest = predict(predictionModel, testSpam)
+predictedSpam = rep("nonspam", dim(testSpam)[1])
+## Classify as `spam' for those with prob > 0.5
+predictedSpam[predictionModel$fitted > 0.5] = "spam"
+
+## Classification table
+table(predictedSpam, testSpam$type)
+##
+## predictedSpam nonspam spam
+## nonspam 1346 458
+## spam 61 449
+## Error rate
+(61 + 458)/(1346 + 458 + 61 + 449)
+## [1] 0.2243
+```
+
+## Step 8: Interpret results
+* Use the appropriate language
+ + describes
+ + correlates with/associated with
+ + leads to/causes
+ + predicts
+* Give an explanation
+* Interpret coefficients
+* Interpret measures of uncertainty
+
+### Our example
+* The fraction of charcters that are dollar signs can be used to predict if an email is Spam
+* Anything with more than 6.6% dollar signs is classified as Spam
+* More dollar signs always means more Spam under our prediction
+* Our test set error rate was 22.4%
+
+## Step 9: Challenge results
+* Challenge all steps:
+ + Question
+ + Data source
+ + Processing
+ + Analysis
+ + Conclusions
+* Challenge measures of uncertainty
+* Challenge choices of terms to include in models
+* Think of potential alternative analyses
+
+## Step 10: Synthesize/write-up results
+* Lead with the question
+* Summarize the analyses into the story
+* Don't include every analysis, include it
+ + If it is needed for the story
+ + If it is needed to address a challenge
+* Order analyses according to the story, rather than chronologically
+* Include "pretty" figures that contribute to the story
+
+### Our example
+* Lead with the question
+ + Can I use quantitative characteristics of the emails to classify them as SPAM/HAM?
+* Describe the approach
+ + Collected data from UCI -> created training/test sets
+ + Explored relationships
+ + Choose logistic model on training set by cross validation
+ + Applied to test, 78% test set accuracy
+* Interpret results
+ + Number of dollar signs seems reasonable, e.g. "Make money with Viagra $ $ $ $!"
+* Challenge results
+ + 78% isn't that great
+ + I could use more variables
+ + Why logistic regression?
