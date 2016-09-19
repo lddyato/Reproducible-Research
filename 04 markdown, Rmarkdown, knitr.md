@@ -26,6 +26,7 @@ then convert it to structurally valid XHTML (or HTML)."---- John Gruber, creator
 [RStudio](http://www.rstudio.com/)
 
 OR:
+
 I spend so much time reading [R bloggers][1] and [Simply Statistics][2]!
 [1]: http://www.r-bloggers.com/ "R bloggers"
 [2]: http://simplystatistics.org/ "Simply Statistics"
@@ -95,20 +96,9 @@ I spend so much time reading [R bloggers][1] and [Simply Statistics][2]!
 
 ## Notes
 • knitr	will	fill	a	new	document	with	filler	text;	delete	it	
-• Code	chunks	begin	with	```{r}	and	end	with	```
-• All	R	code	goes	in	between	these	markers	
-• Code	chunks	can	have	names,	which	is	useful	when	we	start	making	graphics	
-```{r firstchunk, echo=FALSE} 
-## R code goes here
-##  echo=FALSE means that do not echo code, that is, the code is hided, the result is presented.
-```
-```{r firstchunk, echo=FALSE, results="hide"} 
-## R code goes here
-## echo=FALSE means that do not echo code, that is, the code is hided, the result is presented.
-## echo=FALSE, results="hide" means that the code and the results are both hided.
-## echo=TRUE is the defalut.
-## results="asis" means that the result is presented, and this is the default.
-```
+• Code	chunks	begin	with	```{r}	and	end	with	```    
+• All	R	code	goes	in	between	these	markers	    
+• Code	chunks	can	have	names,	which	is	useful	when	we	start	making	graphics	    
 • By	default,	code	in	a	code	chunk	is	echoed,	as	will	the	results	of	the	computa)on	(if	there	are	results	to	print)	
 
 # Processing of knitr Documents
@@ -125,4 +115,17 @@ I spend so much time reading [R bloggers][1] and [Simply Statistics][2]!
 
 ```{r setoptions, echo=FALSE}
 opts_chunk$set(echo =  FALSE, results = "hide")
+# The default is  echo = TRUE and results = asis" means that the code and the results are both outputed.
+##  echo=FALSE means that do not echo code, that is, the code is hided, the result is presented.
 ```
+
+# Caching computations
+• What	if	one	chunk	takes	a	long	)me	to	run?	
+• All	chunks	have	to	be	re-computed	every	)me	you	re-knit	the	file	
+• The	cache=TRUE op)on	can	be	set	on	a	chunk-by-chunk	basis	to	store	results	of	computa)on	
+• AVer	the	first	run,	results	are	loaded	from	cache	
+
+# Caching caveats
+• If	the	data	or	code	(or	anything	external)	changes,	you	need	to	re-run	the	cached	code	chunks	
+• Dependencies	are	not	checked	explicitly	
+• Chunks	with	significant	side	effects	may	not	be	cacheable	
